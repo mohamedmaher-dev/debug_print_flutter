@@ -8,7 +8,7 @@ const String _empty = '';
 
 abstract class DebugPrint {
   static final extensions = _DebugPrintExt();
-  static void print(
+  static void dPrint(
     Object msg, {
     PrintColor? textColor,
     PrintColor? backColor,
