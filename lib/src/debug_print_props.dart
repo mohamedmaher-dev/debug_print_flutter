@@ -1,4 +1,4 @@
-part of 'debug_print.dart';
+part of 'debug_print_flutter.dart';
 
 enum TextWeight {
   normal(value: "0;"),

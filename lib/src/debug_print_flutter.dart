@@ -2,13 +2,13 @@ import 'package:flutter/foundation.dart';
 part 'debug_print_props.dart';
 part 'debug_print_ext.dart';
 
-const String _base = "\u001b[";
+const String _baseFront = "\u001b[";
 const String _baseBack = "\u001b[0m";
 const String _empty = '';
 
-abstract class DebugPrint {
-  static final extensions = _DebugPrintExt();
-  static void dPrint(
+class DebugPrint {
+  const DebugPrint();
+  void custom(
     Object msg, {
     PrintColor? textColor,
     PrintColor? backColor,
@@ -30,7 +30,7 @@ abstract class DebugPrint {
       String textColorCode = textColor == null ? _empty : "3${textColor.value}";
       String backColorCode = backColor == null ? _empty : "4${backColor.value}";
       String printCode =
-          '$_base$textWeightCode$textItalicCode$textUnderlineCode$textDoneCode$textAlphaAnimCode$textColorCode$backColorCode$msgCode$_baseBack';
+          '$_baseFront$textWeightCode$textItalicCode$textUnderlineCode$textDoneCode$textAlphaAnimCode$textColorCode$backColorCode$msgCode$_baseBack';
       print(printCode);
     }
   }

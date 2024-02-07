@@ -1,1 +1,1 @@
-export './src/debug_print.dart';
+export './src/debug_print_flutter.dart';
